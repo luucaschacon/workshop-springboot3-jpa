@@ -3,10 +3,20 @@ package com.educandoweb.course.entities;
 import java.io.Serializable;
 import java.util.Objects;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "tb_user")
 public class User implements Serializable { // CRIANDO A ENTIDADE 'USER'
 
 	private static final long serialVersionUID = 1L;
 	
+	@Id // INFORMANDO QUE O CAMPO DE CHAVE PRIMARIA DA TABELA É O 'ID'
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
 	private String email;
