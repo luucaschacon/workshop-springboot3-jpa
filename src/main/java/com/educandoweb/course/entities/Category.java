@@ -25,7 +25,6 @@ public class Category implements Serializable {
 	private String name;
 	
 	// ACRESCENTANDO O ATRIBUTO PARA ASSOCIAÇÃO DOS PRODUTOS COM AS CATEGORIAS:
-	
 	@JsonIgnore
 	@ManyToMany(mappedBy = "categories")
 	private Set<Product> products = new HashSet<>();
