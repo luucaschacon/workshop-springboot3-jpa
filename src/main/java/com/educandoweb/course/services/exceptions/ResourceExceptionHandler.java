@@ -11,7 +11,7 @@ import com.educandoweb.course.resources.exceptions.StandardError;
 
 import jakarta.servlet.http.HttpServletRequest;
 
-@ControllerAdvice
+@ControllerAdvice // INTERSEPTA AS EXCESSÕES QUE ACONTECEREM PARA QUE O OBJETO POSSA EXECUTAR UM POSSIVEL TRATAMENTO
 public class ResourceExceptionHandler {
 	
 	@ExceptionHandler(ResourceNotFoundException.class)
